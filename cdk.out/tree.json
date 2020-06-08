@@ -1,0 +1,215 @@
+{
+  "version": "tree-0.1",
+  "tree": {
+    "id": "App",
+    "path": "",
+    "children": [
+      {
+        "id": "Tree",
+        "path": "Tree"
+      },
+      {
+        "id": "workshop",
+        "path": "workshop",
+        "children": [
+          {
+            "id": "MyTestVpc",
+            "path": "workshop/MyTestVpc",
+            "children": [
+              {
+                "id": "Resource",
+                "path": "workshop/MyTestVpc/Resource"
+              },
+              {
+                "id": "PublicSubnet1",
+                "path": "workshop/MyTestVpc/PublicSubnet1",
+                "children": [
+                  {
+                    "id": "Subnet",
+                    "path": "workshop/MyTestVpc/PublicSubnet1/Subnet"
+                  },
+                  {
+                    "id": "Acl",
+                    "path": "workshop/MyTestVpc/PublicSubnet1/Acl"
+                  },
+                  {
+                    "id": "RouteTable",
+                    "path": "workshop/MyTestVpc/PublicSubnet1/RouteTable"
+                  },
+                  {
+                    "id": "RouteTableAssociation",
+                    "path": "workshop/MyTestVpc/PublicSubnet1/RouteTableAssociation"
+                  },
+                  {
+                    "id": "DefaultRoute",
+                    "path": "workshop/MyTestVpc/PublicSubnet1/DefaultRoute"
+                  },
+                  {
+                    "id": "EIP",
+                    "path": "workshop/MyTestVpc/PublicSubnet1/EIP"
+                  },
+                  {
+                    "id": "NATGateway",
+                    "path": "workshop/MyTestVpc/PublicSubnet1/NATGateway"
+                  }
+                ]
+              },
+              {
+                "id": "PublicSubnet2",
+                "path": "workshop/MyTestVpc/PublicSubnet2",
+                "children": [
+                  {
+                    "id": "Subnet",
+                    "path": "workshop/MyTestVpc/PublicSubnet2/Subnet"
+                  },
+                  {
+                    "id": "Acl",
+                    "path": "workshop/MyTestVpc/PublicSubnet2/Acl"
+                  },
+                  {
+                    "id": "RouteTable",
+                    "path": "workshop/MyTestVpc/PublicSubnet2/RouteTable"
+                  },
+                  {
+                    "id": "RouteTableAssociation",
+                    "path": "workshop/MyTestVpc/PublicSubnet2/RouteTableAssociation"
+                  },
+                  {
+                    "id": "DefaultRoute",
+                    "path": "workshop/MyTestVpc/PublicSubnet2/DefaultRoute"
+                  },
+                  {
+                    "id": "EIP",
+                    "path": "workshop/MyTestVpc/PublicSubnet2/EIP"
+                  },
+                  {
+                    "id": "NATGateway",
+                    "path": "workshop/MyTestVpc/PublicSubnet2/NATGateway"
+                  }
+                ]
+              },
+              {
+                "id": "PrivateSubnet1",
+                "path": "workshop/MyTestVpc/PrivateSubnet1",
+                "children": [
+                  {
+                    "id": "Subnet",
+                    "path": "workshop/MyTestVpc/PrivateSubnet1/Subnet"
+                  },
+                  {
+                    "id": "Acl",
+                    "path": "workshop/MyTestVpc/PrivateSubnet1/Acl"
+                  },
+                  {
+                    "id": "RouteTable",
+                    "path": "workshop/MyTestVpc/PrivateSubnet1/RouteTable"
+                  },
+                  {
+                    "id": "RouteTableAssociation",
+                    "path": "workshop/MyTestVpc/PrivateSubnet1/RouteTableAssociation"
+                  },
+                  {
+                    "id": "DefaultRoute",
+                    "path": "workshop/MyTestVpc/PrivateSubnet1/DefaultRoute"
+                  }
+                ]
+              },
+              {
+                "id": "PrivateSubnet2",
+                "path": "workshop/MyTestVpc/PrivateSubnet2",
+                "children": [
+                  {
+                    "id": "Subnet",
+                    "path": "workshop/MyTestVpc/PrivateSubnet2/Subnet"
+                  },
+                  {
+                    "id": "Acl",
+                    "path": "workshop/MyTestVpc/PrivateSubnet2/Acl"
+                  },
+                  {
+                    "id": "RouteTable",
+                    "path": "workshop/MyTestVpc/PrivateSubnet2/RouteTable"
+                  },
+                  {
+                    "id": "RouteTableAssociation",
+                    "path": "workshop/MyTestVpc/PrivateSubnet2/RouteTableAssociation"
+                  },
+                  {
+                    "id": "DefaultRoute",
+                    "path": "workshop/MyTestVpc/PrivateSubnet2/DefaultRoute"
+                  }
+                ]
+              },
+              {
+                "id": "IGW",
+                "path": "workshop/MyTestVpc/IGW"
+              },
+              {
+                "id": "VPCGW",
+                "path": "workshop/MyTestVpc/VPCGW"
+              }
+            ]
+          },
+          {
+            "id": "MyTestInstance",
+            "path": "workshop/MyTestInstance",
+            "children": [
+              {
+                "id": "InstanceSecurityGroup",
+                "path": "workshop/MyTestInstance/InstanceSecurityGroup",
+                "children": [
+                  {
+                    "id": "Resource",
+                    "path": "workshop/MyTestInstance/InstanceSecurityGroup/Resource"
+                  }
+                ]
+              },
+              {
+                "id": "InstanceRole",
+                "path": "workshop/MyTestInstance/InstanceRole",
+                "children": [
+                  {
+                    "id": "Resource",
+                    "path": "workshop/MyTestInstance/InstanceRole/Resource"
+                  }
+                ]
+              },
+              {
+                "id": "InstanceProfile",
+                "path": "workshop/MyTestInstance/InstanceProfile"
+              },
+              {
+                "id": "Resource",
+                "path": "workshop/MyTestInstance/Resource"
+              }
+            ]
+          },
+          {
+            "id": "SsmParameterValue:--aws--service--ami-amazon-linux-latest--amzn-ami-hvm-x86_64-gp2:C96584B6-F00A-464E-AD19-53AFF4B05118.Parameter",
+            "path": "workshop/SsmParameterValue:--aws--service--ami-amazon-linux-latest--amzn-ami-hvm-x86_64-gp2:C96584B6-F00A-464E-AD19-53AFF4B05118.Parameter"
+          },
+          {
+            "id": "SsmParameterValue:--aws--service--ami-amazon-linux-latest--amzn-ami-hvm-x86_64-gp2:C96584B6-F00A-464E-AD19-53AFF4B05118",
+            "path": "workshop/SsmParameterValue:--aws--service--ami-amazon-linux-latest--amzn-ami-hvm-x86_64-gp2:C96584B6-F00A-464E-AD19-53AFF4B05118"
+          },
+          {
+            "id": "MyTestAlarm",
+            "path": "workshop/MyTestAlarm",
+            "children": [
+              {
+                "id": "MyTestAlarm",
+                "path": "workshop/MyTestAlarm/MyTestAlarm",
+                "children": [
+                  {
+                    "id": "Resource",
+                    "path": "workshop/MyTestAlarm/MyTestAlarm/Resource"
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  }
+}

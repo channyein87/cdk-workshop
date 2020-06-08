@@ -1,0 +1,593 @@
+{
+  "Resources": {
+    "MyTestVpcE144EEF4": {
+      "Type": "AWS::EC2::VPC",
+      "Properties": {
+        "CidrBlock": "10.1.0.0/24",
+        "EnableDnsHostnames": true,
+        "EnableDnsSupport": true,
+        "InstanceTenancy": "default",
+        "Tags": [
+          {
+            "Key": "Name",
+            "Value": "workshop/MyTestVpc"
+          }
+        ]
+      },
+      "Metadata": {
+        "aws:cdk:path": "workshop/MyTestVpc/Resource"
+      }
+    },
+    "MyTestVpcPublicSubnet1SubnetA7B59A2C": {
+      "Type": "AWS::EC2::Subnet",
+      "Properties": {
+        "CidrBlock": "10.1.0.0/26",
+        "VpcId": {
+          "Ref": "MyTestVpcE144EEF4"
+        },
+        "AvailabilityZone": {
+          "Fn::Select": [
+            0,
+            {
+              "Fn::GetAZs": ""
+            }
+          ]
+        },
+        "MapPublicIpOnLaunch": true,
+        "Tags": [
+          {
+            "Key": "Name",
+            "Value": "workshop/MyTestVpc/PublicSubnet1"
+          },
+          {
+            "Key": "aws-cdk:subnet-name",
+            "Value": "Public"
+          },
+          {
+            "Key": "aws-cdk:subnet-type",
+            "Value": "Public"
+          }
+        ]
+      },
+      "Metadata": {
+        "aws:cdk:path": "workshop/MyTestVpc/PublicSubnet1/Subnet"
+      }
+    },
+    "MyTestVpcPublicSubnet1RouteTable88486E9C": {
+      "Type": "AWS::EC2::RouteTable",
+      "Properties": {
+        "VpcId": {
+          "Ref": "MyTestVpcE144EEF4"
+        },
+        "Tags": [
+          {
+            "Key": "Name",
+            "Value": "workshop/MyTestVpc/PublicSubnet1"
+          }
+        ]
+      },
+      "Metadata": {
+        "aws:cdk:path": "workshop/MyTestVpc/PublicSubnet1/RouteTable"
+      }
+    },
+    "MyTestVpcPublicSubnet1RouteTableAssociation0AD850A1": {
+      "Type": "AWS::EC2::SubnetRouteTableAssociation",
+      "Properties": {
+        "RouteTableId": {
+          "Ref": "MyTestVpcPublicSubnet1RouteTable88486E9C"
+        },
+        "SubnetId": {
+          "Ref": "MyTestVpcPublicSubnet1SubnetA7B59A2C"
+        }
+      },
+      "Metadata": {
+        "aws:cdk:path": "workshop/MyTestVpc/PublicSubnet1/RouteTableAssociation"
+      }
+    },
+    "MyTestVpcPublicSubnet1DefaultRoute22B6A79B": {
+      "Type": "AWS::EC2::Route",
+      "Properties": {
+        "RouteTableId": {
+          "Ref": "MyTestVpcPublicSubnet1RouteTable88486E9C"
+        },
+        "DestinationCidrBlock": "0.0.0.0/0",
+        "GatewayId": {
+          "Ref": "MyTestVpcIGW872B5B74"
+        }
+      },
+      "DependsOn": [
+        "MyTestVpcVPCGWFCF9AAB8"
+      ],
+      "Metadata": {
+        "aws:cdk:path": "workshop/MyTestVpc/PublicSubnet1/DefaultRoute"
+      }
+    },
+    "MyTestVpcPublicSubnet1EIPE6793D52": {
+      "Type": "AWS::EC2::EIP",
+      "Properties": {
+        "Domain": "vpc"
+      },
+      "Metadata": {
+        "aws:cdk:path": "workshop/MyTestVpc/PublicSubnet1/EIP"
+      }
+    },
+    "MyTestVpcPublicSubnet1NATGateway8326446C": {
+      "Type": "AWS::EC2::NatGateway",
+      "Properties": {
+        "AllocationId": {
+          "Fn::GetAtt": [
+            "MyTestVpcPublicSubnet1EIPE6793D52",
+            "AllocationId"
+          ]
+        },
+        "SubnetId": {
+          "Ref": "MyTestVpcPublicSubnet1SubnetA7B59A2C"
+        },
+        "Tags": [
+          {
+            "Key": "Name",
+            "Value": "workshop/MyTestVpc/PublicSubnet1"
+          }
+        ]
+      },
+      "Metadata": {
+        "aws:cdk:path": "workshop/MyTestVpc/PublicSubnet1/NATGateway"
+      }
+    },
+    "MyTestVpcPublicSubnet2SubnetBE93625D": {
+      "Type": "AWS::EC2::Subnet",
+      "Properties": {
+        "CidrBlock": "10.1.0.64/26",
+        "VpcId": {
+          "Ref": "MyTestVpcE144EEF4"
+        },
+        "AvailabilityZone": {
+          "Fn::Select": [
+            1,
+            {
+              "Fn::GetAZs": ""
+            }
+          ]
+        },
+        "MapPublicIpOnLaunch": true,
+        "Tags": [
+          {
+            "Key": "Name",
+            "Value": "workshop/MyTestVpc/PublicSubnet2"
+          },
+          {
+            "Key": "aws-cdk:subnet-name",
+            "Value": "Public"
+          },
+          {
+            "Key": "aws-cdk:subnet-type",
+            "Value": "Public"
+          }
+        ]
+      },
+      "Metadata": {
+        "aws:cdk:path": "workshop/MyTestVpc/PublicSubnet2/Subnet"
+      }
+    },
+    "MyTestVpcPublicSubnet2RouteTableE0D83E2C": {
+      "Type": "AWS::EC2::RouteTable",
+      "Properties": {
+        "VpcId": {
+          "Ref": "MyTestVpcE144EEF4"
+        },
+        "Tags": [
+          {
+            "Key": "Name",
+            "Value": "workshop/MyTestVpc/PublicSubnet2"
+          }
+        ]
+      },
+      "Metadata": {
+        "aws:cdk:path": "workshop/MyTestVpc/PublicSubnet2/RouteTable"
+      }
+    },
+    "MyTestVpcPublicSubnet2RouteTableAssociationD187587B": {
+      "Type": "AWS::EC2::SubnetRouteTableAssociation",
+      "Properties": {
+        "RouteTableId": {
+          "Ref": "MyTestVpcPublicSubnet2RouteTableE0D83E2C"
+        },
+        "SubnetId": {
+          "Ref": "MyTestVpcPublicSubnet2SubnetBE93625D"
+        }
+      },
+      "Metadata": {
+        "aws:cdk:path": "workshop/MyTestVpc/PublicSubnet2/RouteTableAssociation"
+      }
+    },
+    "MyTestVpcPublicSubnet2DefaultRoute25480A68": {
+      "Type": "AWS::EC2::Route",
+      "Properties": {
+        "RouteTableId": {
+          "Ref": "MyTestVpcPublicSubnet2RouteTableE0D83E2C"
+        },
+        "DestinationCidrBlock": "0.0.0.0/0",
+        "GatewayId": {
+          "Ref": "MyTestVpcIGW872B5B74"
+        }
+      },
+      "DependsOn": [
+        "MyTestVpcVPCGWFCF9AAB8"
+      ],
+      "Metadata": {
+        "aws:cdk:path": "workshop/MyTestVpc/PublicSubnet2/DefaultRoute"
+      }
+    },
+    "MyTestVpcPublicSubnet2EIP46C9597E": {
+      "Type": "AWS::EC2::EIP",
+      "Properties": {
+        "Domain": "vpc"
+      },
+      "Metadata": {
+        "aws:cdk:path": "workshop/MyTestVpc/PublicSubnet2/EIP"
+      }
+    },
+    "MyTestVpcPublicSubnet2NATGateway7DE3C708": {
+      "Type": "AWS::EC2::NatGateway",
+      "Properties": {
+        "AllocationId": {
+          "Fn::GetAtt": [
+            "MyTestVpcPublicSubnet2EIP46C9597E",
+            "AllocationId"
+          ]
+        },
+        "SubnetId": {
+          "Ref": "MyTestVpcPublicSubnet2SubnetBE93625D"
+        },
+        "Tags": [
+          {
+            "Key": "Name",
+            "Value": "workshop/MyTestVpc/PublicSubnet2"
+          }
+        ]
+      },
+      "Metadata": {
+        "aws:cdk:path": "workshop/MyTestVpc/PublicSubnet2/NATGateway"
+      }
+    },
+    "MyTestVpcPrivateSubnet1SubnetB29DFA33": {
+      "Type": "AWS::EC2::Subnet",
+      "Properties": {
+        "CidrBlock": "10.1.0.128/26",
+        "VpcId": {
+          "Ref": "MyTestVpcE144EEF4"
+        },
+        "AvailabilityZone": {
+          "Fn::Select": [
+            0,
+            {
+              "Fn::GetAZs": ""
+            }
+          ]
+        },
+        "MapPublicIpOnLaunch": false,
+        "Tags": [
+          {
+            "Key": "Name",
+            "Value": "workshop/MyTestVpc/PrivateSubnet1"
+          },
+          {
+            "Key": "aws-cdk:subnet-name",
+            "Value": "Private"
+          },
+          {
+            "Key": "aws-cdk:subnet-type",
+            "Value": "Private"
+          }
+        ]
+      },
+      "Metadata": {
+        "aws:cdk:path": "workshop/MyTestVpc/PrivateSubnet1/Subnet"
+      }
+    },
+    "MyTestVpcPrivateSubnet1RouteTableCAB302BE": {
+      "Type": "AWS::EC2::RouteTable",
+      "Properties": {
+        "VpcId": {
+          "Ref": "MyTestVpcE144EEF4"
+        },
+        "Tags": [
+          {
+            "Key": "Name",
+            "Value": "workshop/MyTestVpc/PrivateSubnet1"
+          }
+        ]
+      },
+      "Metadata": {
+        "aws:cdk:path": "workshop/MyTestVpc/PrivateSubnet1/RouteTable"
+      }
+    },
+    "MyTestVpcPrivateSubnet1RouteTableAssociation13FF36EA": {
+      "Type": "AWS::EC2::SubnetRouteTableAssociation",
+      "Properties": {
+        "RouteTableId": {
+          "Ref": "MyTestVpcPrivateSubnet1RouteTableCAB302BE"
+        },
+        "SubnetId": {
+          "Ref": "MyTestVpcPrivateSubnet1SubnetB29DFA33"
+        }
+      },
+      "Metadata": {
+        "aws:cdk:path": "workshop/MyTestVpc/PrivateSubnet1/RouteTableAssociation"
+      }
+    },
+    "MyTestVpcPrivateSubnet1DefaultRoute65831044": {
+      "Type": "AWS::EC2::Route",
+      "Properties": {
+        "RouteTableId": {
+          "Ref": "MyTestVpcPrivateSubnet1RouteTableCAB302BE"
+        },
+        "DestinationCidrBlock": "0.0.0.0/0",
+        "NatGatewayId": {
+          "Ref": "MyTestVpcPublicSubnet1NATGateway8326446C"
+        }
+      },
+      "Metadata": {
+        "aws:cdk:path": "workshop/MyTestVpc/PrivateSubnet1/DefaultRoute"
+      }
+    },
+    "MyTestVpcPrivateSubnet2Subnet2D9A0D84": {
+      "Type": "AWS::EC2::Subnet",
+      "Properties": {
+        "CidrBlock": "10.1.0.192/26",
+        "VpcId": {
+          "Ref": "MyTestVpcE144EEF4"
+        },
+        "AvailabilityZone": {
+          "Fn::Select": [
+            1,
+            {
+              "Fn::GetAZs": ""
+            }
+          ]
+        },
+        "MapPublicIpOnLaunch": false,
+        "Tags": [
+          {
+            "Key": "Name",
+            "Value": "workshop/MyTestVpc/PrivateSubnet2"
+          },
+          {
+            "Key": "aws-cdk:subnet-name",
+            "Value": "Private"
+          },
+          {
+            "Key": "aws-cdk:subnet-type",
+            "Value": "Private"
+          }
+        ]
+      },
+      "Metadata": {
+        "aws:cdk:path": "workshop/MyTestVpc/PrivateSubnet2/Subnet"
+      }
+    },
+    "MyTestVpcPrivateSubnet2RouteTableC6EC54E3": {
+      "Type": "AWS::EC2::RouteTable",
+      "Properties": {
+        "VpcId": {
+          "Ref": "MyTestVpcE144EEF4"
+        },
+        "Tags": [
+          {
+            "Key": "Name",
+            "Value": "workshop/MyTestVpc/PrivateSubnet2"
+          }
+        ]
+      },
+      "Metadata": {
+        "aws:cdk:path": "workshop/MyTestVpc/PrivateSubnet2/RouteTable"
+      }
+    },
+    "MyTestVpcPrivateSubnet2RouteTableAssociation64764335": {
+      "Type": "AWS::EC2::SubnetRouteTableAssociation",
+      "Properties": {
+        "RouteTableId": {
+          "Ref": "MyTestVpcPrivateSubnet2RouteTableC6EC54E3"
+        },
+        "SubnetId": {
+          "Ref": "MyTestVpcPrivateSubnet2Subnet2D9A0D84"
+        }
+      },
+      "Metadata": {
+        "aws:cdk:path": "workshop/MyTestVpc/PrivateSubnet2/RouteTableAssociation"
+      }
+    },
+    "MyTestVpcPrivateSubnet2DefaultRoute184FEACC": {
+      "Type": "AWS::EC2::Route",
+      "Properties": {
+        "RouteTableId": {
+          "Ref": "MyTestVpcPrivateSubnet2RouteTableC6EC54E3"
+        },
+        "DestinationCidrBlock": "0.0.0.0/0",
+        "NatGatewayId": {
+          "Ref": "MyTestVpcPublicSubnet2NATGateway7DE3C708"
+        }
+      },
+      "Metadata": {
+        "aws:cdk:path": "workshop/MyTestVpc/PrivateSubnet2/DefaultRoute"
+      }
+    },
+    "MyTestVpcIGW872B5B74": {
+      "Type": "AWS::EC2::InternetGateway",
+      "Properties": {
+        "Tags": [
+          {
+            "Key": "Name",
+            "Value": "workshop/MyTestVpc"
+          }
+        ]
+      },
+      "Metadata": {
+        "aws:cdk:path": "workshop/MyTestVpc/IGW"
+      }
+    },
+    "MyTestVpcVPCGWFCF9AAB8": {
+      "Type": "AWS::EC2::VPCGatewayAttachment",
+      "Properties": {
+        "VpcId": {
+          "Ref": "MyTestVpcE144EEF4"
+        },
+        "InternetGatewayId": {
+          "Ref": "MyTestVpcIGW872B5B74"
+        }
+      },
+      "Metadata": {
+        "aws:cdk:path": "workshop/MyTestVpc/VPCGW"
+      }
+    },
+    "MyTestInstanceInstanceSecurityGroupB90B57AB": {
+      "Type": "AWS::EC2::SecurityGroup",
+      "Properties": {
+        "GroupDescription": "workshop/MyTestInstance/InstanceSecurityGroup",
+        "SecurityGroupEgress": [
+          {
+            "CidrIp": "0.0.0.0/0",
+            "Description": "Allow all outbound traffic by default",
+            "IpProtocol": "-1"
+          }
+        ],
+        "Tags": [
+          {
+            "Key": "Name",
+            "Value": "workshop/MyTestInstance"
+          }
+        ],
+        "VpcId": {
+          "Ref": "MyTestVpcE144EEF4"
+        }
+      },
+      "Metadata": {
+        "aws:cdk:path": "workshop/MyTestInstance/InstanceSecurityGroup/Resource"
+      }
+    },
+    "MyTestInstanceInstanceRole247E02FE": {
+      "Type": "AWS::IAM::Role",
+      "Properties": {
+        "AssumeRolePolicyDocument": {
+          "Statement": [
+            {
+              "Action": "sts:AssumeRole",
+              "Effect": "Allow",
+              "Principal": {
+                "Service": {
+                  "Fn::Join": [
+                    "",
+                    [
+                      "ec2.",
+                      {
+                        "Ref": "AWS::URLSuffix"
+                      }
+                    ]
+                  ]
+                }
+              }
+            }
+          ],
+          "Version": "2012-10-17"
+        },
+        "Tags": [
+          {
+            "Key": "Name",
+            "Value": "workshop/MyTestInstance"
+          }
+        ]
+      },
+      "Metadata": {
+        "aws:cdk:path": "workshop/MyTestInstance/InstanceRole/Resource"
+      }
+    },
+    "MyTestInstanceInstanceProfile134329F3": {
+      "Type": "AWS::IAM::InstanceProfile",
+      "Properties": {
+        "Roles": [
+          {
+            "Ref": "MyTestInstanceInstanceRole247E02FE"
+          }
+        ]
+      },
+      "Metadata": {
+        "aws:cdk:path": "workshop/MyTestInstance/InstanceProfile"
+      }
+    },
+    "MyTestInstance15794745": {
+      "Type": "AWS::EC2::Instance",
+      "Properties": {
+        "AvailabilityZone": {
+          "Fn::Select": [
+            0,
+            {
+              "Fn::GetAZs": ""
+            }
+          ]
+        },
+        "IamInstanceProfile": {
+          "Ref": "MyTestInstanceInstanceProfile134329F3"
+        },
+        "ImageId": {
+          "Ref": "SsmParameterValueawsserviceamiamazonlinuxlatestamznamihvmx8664gp2C96584B6F00A464EAD1953AFF4B05118Parameter"
+        },
+        "InstanceType": "t2.micro",
+        "SecurityGroupIds": [
+          {
+            "Fn::GetAtt": [
+              "MyTestInstanceInstanceSecurityGroupB90B57AB",
+              "GroupId"
+            ]
+          }
+        ],
+        "SubnetId": {
+          "Ref": "MyTestVpcPrivateSubnet1SubnetB29DFA33"
+        },
+        "Tags": [
+          {
+            "Key": "Name",
+            "Value": "workshop/MyTestInstance"
+          }
+        ],
+        "UserData": {
+          "Fn::Base64": "#!/bin/bash"
+        }
+      },
+      "DependsOn": [
+        "MyTestInstanceInstanceRole247E02FE"
+      ],
+      "Metadata": {
+        "aws:cdk:path": "workshop/MyTestInstance/Resource"
+      }
+    },
+    "MyTestAlarm36EF334D": {
+      "Type": "AWS::CloudWatch::Alarm",
+      "Properties": {
+        "ComparisonOperator": "GreaterThanOrEqualToThreshold",
+        "EvaluationPeriods": 2,
+        "Dimensions": [
+          {
+            "Name": "InstanceId",
+            "Value": {
+              "Ref": "MyTestInstance15794745"
+            }
+          }
+        ],
+        "MetricName": "CPUUtilization",
+        "Namespace": "AWS/EC2",
+        "Period": 300,
+        "Statistic": "Average",
+        "Threshold": 85
+      },
+      "Metadata": {
+        "aws:cdk:path": "workshop/MyTestAlarm/MyTestAlarm/Resource"
+      }
+    }
+  },
+  "Parameters": {
+    "SsmParameterValueawsserviceamiamazonlinuxlatestamznamihvmx8664gp2C96584B6F00A464EAD1953AFF4B05118Parameter": {
+      "Type": "AWS::SSM::Parameter::Value<AWS::EC2::Image::Id>",
+      "Default": "/aws/service/ami-amazon-linux-latest/amzn-ami-hvm-x86_64-gp2"
+    }
+  }
+}

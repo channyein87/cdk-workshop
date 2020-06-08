@@ -1,0 +1,681 @@
+{
+  "version": "1.10.0",
+  "artifacts": {
+    "Tree": {
+      "type": "cdk:tree",
+      "properties": {
+        "file": "tree.json"
+      }
+    },
+    "workshop": {
+      "type": "aws:cloudformation:stack",
+      "environment": "aws://unknown-account/unknown-region",
+      "properties": {
+        "templateFile": "workshop.template.json"
+      },
+      "metadata": {
+        "/workshop/MyTestVpc/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "MyTestVpcE144EEF4",
+            "trace": [
+              "new Vpc (/tmp/jsii-kernel-4OoBOB/node_modules/@aws-cdk/aws-ec2/lib/vpc.js:262:25)",
+              "obj._wrapSandboxCode (/home/ec2-user/environment/workshop/.env/lib/python3.6/dist-packages/jsii/_embedded/jsii/jsii-runtime.js:6992:49)",
+              "Kernel._wrapSandboxCode (/home/ec2-user/environment/workshop/.env/lib/python3.6/dist-packages/jsii/_embedded/jsii/jsii-runtime.js:7444:20)",
+              "Kernel._create (/home/ec2-user/environment/workshop/.env/lib/python3.6/dist-packages/jsii/_embedded/jsii/jsii-runtime.js:6992:26)",
+              "Kernel.create (/home/ec2-user/environment/workshop/.env/lib/python3.6/dist-packages/jsii/_embedded/jsii/jsii-runtime.js:6746:21)",
+              "KernelHost.processRequest (/home/ec2-user/environment/workshop/.env/lib/python3.6/dist-packages/jsii/_embedded/jsii/jsii-runtime.js:6521:28)",
+              "KernelHost.run (/home/ec2-user/environment/workshop/.env/lib/python3.6/dist-packages/jsii/_embedded/jsii/jsii-runtime.js:6464:14)",
+              "Immediate.setImmediate [as _onImmediate] (/home/ec2-user/environment/workshop/.env/lib/python3.6/dist-packages/jsii/_embedded/jsii/jsii-runtime.js:6467:37)",
+              "runCallback (timers.js:705:18)",
+              "tryOnImmediate (timers.js:676:5)",
+              "processImmediate (timers.js:658:5)"
+            ]
+          }
+        ],
+        "/workshop/MyTestVpc/PublicSubnet1/Subnet": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "MyTestVpcPublicSubnet1SubnetA7B59A2C",
+            "trace": [
+              "new Subnet (/tmp/jsii-kernel-4OoBOB/node_modules/@aws-cdk/aws-ec2/lib/vpc.js:548:24)",
+              "new PublicSubnet (/tmp/jsii-kernel-4OoBOB/node_modules/@aws-cdk/aws-ec2/lib/vpc.js:642:9)",
+              "availabilityZones.forEach (/tmp/jsii-kernel-4OoBOB/node_modules/@aws-cdk/aws-ec2/lib/vpc.js:477:42)",
+              "Array.forEach (<anonymous>)",
+              "Vpc.createSubnetResources (/tmp/jsii-kernel-4OoBOB/node_modules/@aws-cdk/aws-ec2/lib/vpc.js:461:32)",
+              "Vpc.createSubnets (/tmp/jsii-kernel-4OoBOB/node_modules/@aws-cdk/aws-ec2/lib/vpc.js:457:18)",
+              "new Vpc (/tmp/jsii-kernel-4OoBOB/node_modules/@aws-cdk/aws-ec2/lib/vpc.js:282:14)",
+              "obj._wrapSandboxCode (/home/ec2-user/environment/workshop/.env/lib/python3.6/dist-packages/jsii/_embedded/jsii/jsii-runtime.js:6992:49)",
+              "Kernel._wrapSandboxCode (/home/ec2-user/environment/workshop/.env/lib/python3.6/dist-packages/jsii/_embedded/jsii/jsii-runtime.js:7444:20)",
+              "Kernel._create (/home/ec2-user/environment/workshop/.env/lib/python3.6/dist-packages/jsii/_embedded/jsii/jsii-runtime.js:6992:26)",
+              "Kernel.create (/home/ec2-user/environment/workshop/.env/lib/python3.6/dist-packages/jsii/_embedded/jsii/jsii-runtime.js:6746:21)",
+              "KernelHost.processRequest (/home/ec2-user/environment/workshop/.env/lib/python3.6/dist-packages/jsii/_embedded/jsii/jsii-runtime.js:6521:28)",
+              "KernelHost.run (/home/ec2-user/environment/workshop/.env/lib/python3.6/dist-packages/jsii/_embedded/jsii/jsii-runtime.js:6464:14)",
+              "Immediate.setImmediate [as _onImmediate] (/home/ec2-user/environment/workshop/.env/lib/python3.6/dist-packages/jsii/_embedded/jsii/jsii-runtime.js:6467:37)",
+              "runCallback (timers.js:705:18)",
+              "tryOnImmediate (timers.js:676:5)",
+              "processImmediate (timers.js:658:5)"
+            ]
+          }
+        ],
+        "/workshop/MyTestVpc/PublicSubnet1/RouteTable": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "MyTestVpcPublicSubnet1RouteTable88486E9C",
+            "trace": [
+              "new Subnet (/tmp/jsii-kernel-4OoBOB/node_modules/@aws-cdk/aws-ec2/lib/vpc.js:563:23)",
+              "new PublicSubnet (/tmp/jsii-kernel-4OoBOB/node_modules/@aws-cdk/aws-ec2/lib/vpc.js:642:9)",
+              "availabilityZones.forEach (/tmp/jsii-kernel-4OoBOB/node_modules/@aws-cdk/aws-ec2/lib/vpc.js:477:42)",
+              "Array.forEach (<anonymous>)",
+              "Vpc.createSubnetResources (/tmp/jsii-kernel-4OoBOB/node_modules/@aws-cdk/aws-ec2/lib/vpc.js:461:32)",
+              "Vpc.createSubnets (/tmp/jsii-kernel-4OoBOB/node_modules/@aws-cdk/aws-ec2/lib/vpc.js:457:18)",
+              "new Vpc (/tmp/jsii-kernel-4OoBOB/node_modules/@aws-cdk/aws-ec2/lib/vpc.js:282:14)",
+              "obj._wrapSandboxCode (/home/ec2-user/environment/workshop/.env/lib/python3.6/dist-packages/jsii/_embedded/jsii/jsii-runtime.js:6992:49)",
+              "Kernel._wrapSandboxCode (/home/ec2-user/environment/workshop/.env/lib/python3.6/dist-packages/jsii/_embedded/jsii/jsii-runtime.js:7444:20)",
+              "Kernel._create (/home/ec2-user/environment/workshop/.env/lib/python3.6/dist-packages/jsii/_embedded/jsii/jsii-runtime.js:6992:26)",
+              "Kernel.create (/home/ec2-user/environment/workshop/.env/lib/python3.6/dist-packages/jsii/_embedded/jsii/jsii-runtime.js:6746:21)",
+              "KernelHost.processRequest (/home/ec2-user/environment/workshop/.env/lib/python3.6/dist-packages/jsii/_embedded/jsii/jsii-runtime.js:6521:28)",
+              "KernelHost.run (/home/ec2-user/environment/workshop/.env/lib/python3.6/dist-packages/jsii/_embedded/jsii/jsii-runtime.js:6464:14)",
+              "Immediate.setImmediate [as _onImmediate] (/home/ec2-user/environment/workshop/.env/lib/python3.6/dist-packages/jsii/_embedded/jsii/jsii-runtime.js:6467:37)",
+              "runCallback (timers.js:705:18)",
+              "tryOnImmediate (timers.js:676:5)",
+              "processImmediate (timers.js:658:5)"
+            ]
+          }
+        ],
+        "/workshop/MyTestVpc/PublicSubnet1/RouteTableAssociation": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "MyTestVpcPublicSubnet1RouteTableAssociation0AD850A1",
+            "trace": [
+              "new Subnet (/tmp/jsii-kernel-4OoBOB/node_modules/@aws-cdk/aws-ec2/lib/vpc.js:568:9)",
+              "new PublicSubnet (/tmp/jsii-kernel-4OoBOB/node_modules/@aws-cdk/aws-ec2/lib/vpc.js:642:9)",
+              "availabilityZones.forEach (/tmp/jsii-kernel-4OoBOB/node_modules/@aws-cdk/aws-ec2/lib/vpc.js:477:42)",
+              "Array.forEach (<anonymous>)",
+              "Vpc.createSubnetResources (/tmp/jsii-kernel-4OoBOB/node_modules/@aws-cdk/aws-ec2/lib/vpc.js:461:32)",
+              "Vpc.createSubnets (/tmp/jsii-kernel-4OoBOB/node_modules/@aws-cdk/aws-ec2/lib/vpc.js:457:18)",
+              "new Vpc (/tmp/jsii-kernel-4OoBOB/node_modules/@aws-cdk/aws-ec2/lib/vpc.js:282:14)",
+              "obj._wrapSandboxCode (/home/ec2-user/environment/workshop/.env/lib/python3.6/dist-packages/jsii/_embedded/jsii/jsii-runtime.js:6992:49)",
+              "Kernel._wrapSandboxCode (/home/ec2-user/environment/workshop/.env/lib/python3.6/dist-packages/jsii/_embedded/jsii/jsii-runtime.js:7444:20)",
+              "Kernel._create (/home/ec2-user/environment/workshop/.env/lib/python3.6/dist-packages/jsii/_embedded/jsii/jsii-runtime.js:6992:26)",
+              "Kernel.create (/home/ec2-user/environment/workshop/.env/lib/python3.6/dist-packages/jsii/_embedded/jsii/jsii-runtime.js:6746:21)",
+              "KernelHost.processRequest (/home/ec2-user/environment/workshop/.env/lib/python3.6/dist-packages/jsii/_embedded/jsii/jsii-runtime.js:6521:28)",
+              "KernelHost.run (/home/ec2-user/environment/workshop/.env/lib/python3.6/dist-packages/jsii/_embedded/jsii/jsii-runtime.js:6464:14)",
+              "Immediate.setImmediate [as _onImmediate] (/home/ec2-user/environment/workshop/.env/lib/python3.6/dist-packages/jsii/_embedded/jsii/jsii-runtime.js:6467:37)",
+              "runCallback (timers.js:705:18)",
+              "tryOnImmediate (timers.js:676:5)",
+              "processImmediate (timers.js:658:5)"
+            ]
+          }
+        ],
+        "/workshop/MyTestVpc/PublicSubnet1/DefaultRoute": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "MyTestVpcPublicSubnet1DefaultRoute22B6A79B",
+            "trace": [
+              "PublicSubnet.addDefaultInternetRoute (/tmp/jsii-kernel-4OoBOB/node_modules/@aws-cdk/aws-ec2/lib/vpc.js:588:23)",
+              "Vpc.publicSubnets.forEach.publicSubnet (/tmp/jsii-kernel-4OoBOB/node_modules/@aws-cdk/aws-ec2/lib/vpc.js:293:30)",
+              "Array.forEach (<anonymous>)",
+              "new Vpc (/tmp/jsii-kernel-4OoBOB/node_modules/@aws-cdk/aws-ec2/lib/vpc.js:292:32)",
+              "obj._wrapSandboxCode (/home/ec2-user/environment/workshop/.env/lib/python3.6/dist-packages/jsii/_embedded/jsii/jsii-runtime.js:6992:49)",
+              "Kernel._wrapSandboxCode (/home/ec2-user/environment/workshop/.env/lib/python3.6/dist-packages/jsii/_embedded/jsii/jsii-runtime.js:7444:20)",
+              "Kernel._create (/home/ec2-user/environment/workshop/.env/lib/python3.6/dist-packages/jsii/_embedded/jsii/jsii-runtime.js:6992:26)",
+              "Kernel.create (/home/ec2-user/environment/workshop/.env/lib/python3.6/dist-packages/jsii/_embedded/jsii/jsii-runtime.js:6746:21)",
+              "KernelHost.processRequest (/home/ec2-user/environment/workshop/.env/lib/python3.6/dist-packages/jsii/_embedded/jsii/jsii-runtime.js:6521:28)",
+              "KernelHost.run (/home/ec2-user/environment/workshop/.env/lib/python3.6/dist-packages/jsii/_embedded/jsii/jsii-runtime.js:6464:14)",
+              "Immediate.setImmediate [as _onImmediate] (/home/ec2-user/environment/workshop/.env/lib/python3.6/dist-packages/jsii/_embedded/jsii/jsii-runtime.js:6467:37)",
+              "runCallback (timers.js:705:18)",
+              "tryOnImmediate (timers.js:676:5)",
+              "processImmediate (timers.js:658:5)"
+            ]
+          }
+        ],
+        "/workshop/MyTestVpc/PublicSubnet1/EIP": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "MyTestVpcPublicSubnet1EIPE6793D52",
+            "trace": [
+              "PublicSubnet.addNatGateway (/tmp/jsii-kernel-4OoBOB/node_modules/@aws-cdk/aws-ec2/lib/vpc.js:653:27)",
+              "Vpc.createNatGateways (/tmp/jsii-kernel-4OoBOB/node_modules/@aws-cdk/aws-ec2/lib/vpc.js:436:33)",
+              "new Vpc (/tmp/jsii-kernel-4OoBOB/node_modules/@aws-cdk/aws-ec2/lib/vpc.js:297:22)",
+              "obj._wrapSandboxCode (/home/ec2-user/environment/workshop/.env/lib/python3.6/dist-packages/jsii/_embedded/jsii/jsii-runtime.js:6992:49)",
+              "Kernel._wrapSandboxCode (/home/ec2-user/environment/workshop/.env/lib/python3.6/dist-packages/jsii/_embedded/jsii/jsii-runtime.js:7444:20)",
+              "Kernel._create (/home/ec2-user/environment/workshop/.env/lib/python3.6/dist-packages/jsii/_embedded/jsii/jsii-runtime.js:6992:26)",
+              "Kernel.create (/home/ec2-user/environment/workshop/.env/lib/python3.6/dist-packages/jsii/_embedded/jsii/jsii-runtime.js:6746:21)",
+              "KernelHost.processRequest (/home/ec2-user/environment/workshop/.env/lib/python3.6/dist-packages/jsii/_embedded/jsii/jsii-runtime.js:6521:28)",
+              "KernelHost.run (/home/ec2-user/environment/workshop/.env/lib/python3.6/dist-packages/jsii/_embedded/jsii/jsii-runtime.js:6464:14)",
+              "Immediate.setImmediate [as _onImmediate] (/home/ec2-user/environment/workshop/.env/lib/python3.6/dist-packages/jsii/_embedded/jsii/jsii-runtime.js:6467:37)",
+              "runCallback (timers.js:705:18)",
+              "tryOnImmediate (timers.js:676:5)",
+              "processImmediate (timers.js:658:5)"
+            ]
+          }
+        ],
+        "/workshop/MyTestVpc/PublicSubnet1/NATGateway": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "MyTestVpcPublicSubnet1NATGateway8326446C",
+            "trace": [
+              "PublicSubnet.addNatGateway (/tmp/jsii-kernel-4OoBOB/node_modules/@aws-cdk/aws-ec2/lib/vpc.js:651:21)",
+              "Vpc.createNatGateways (/tmp/jsii-kernel-4OoBOB/node_modules/@aws-cdk/aws-ec2/lib/vpc.js:436:33)",
+              "new Vpc (/tmp/jsii-kernel-4OoBOB/node_modules/@aws-cdk/aws-ec2/lib/vpc.js:297:22)",
+              "obj._wrapSandboxCode (/home/ec2-user/environment/workshop/.env/lib/python3.6/dist-packages/jsii/_embedded/jsii/jsii-runtime.js:6992:49)",
+              "Kernel._wrapSandboxCode (/home/ec2-user/environment/workshop/.env/lib/python3.6/dist-packages/jsii/_embedded/jsii/jsii-runtime.js:7444:20)",
+              "Kernel._create (/home/ec2-user/environment/workshop/.env/lib/python3.6/dist-packages/jsii/_embedded/jsii/jsii-runtime.js:6992:26)",
+              "Kernel.create (/home/ec2-user/environment/workshop/.env/lib/python3.6/dist-packages/jsii/_embedded/jsii/jsii-runtime.js:6746:21)",
+              "KernelHost.processRequest (/home/ec2-user/environment/workshop/.env/lib/python3.6/dist-packages/jsii/_embedded/jsii/jsii-runtime.js:6521:28)",
+              "KernelHost.run (/home/ec2-user/environment/workshop/.env/lib/python3.6/dist-packages/jsii/_embedded/jsii/jsii-runtime.js:6464:14)",
+              "Immediate.setImmediate [as _onImmediate] (/home/ec2-user/environment/workshop/.env/lib/python3.6/dist-packages/jsii/_embedded/jsii/jsii-runtime.js:6467:37)",
+              "runCallback (timers.js:705:18)",
+              "tryOnImmediate (timers.js:676:5)",
+              "processImmediate (timers.js:658:5)"
+            ]
+          }
+        ],
+        "/workshop/MyTestVpc/PublicSubnet2/Subnet": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "MyTestVpcPublicSubnet2SubnetBE93625D",
+            "trace": [
+              "new Subnet (/tmp/jsii-kernel-4OoBOB/node_modules/@aws-cdk/aws-ec2/lib/vpc.js:548:24)",
+              "new PublicSubnet (/tmp/jsii-kernel-4OoBOB/node_modules/@aws-cdk/aws-ec2/lib/vpc.js:642:9)",
+              "availabilityZones.forEach (/tmp/jsii-kernel-4OoBOB/node_modules/@aws-cdk/aws-ec2/lib/vpc.js:477:42)",
+              "Array.forEach (<anonymous>)",
+              "Vpc.createSubnetResources (/tmp/jsii-kernel-4OoBOB/node_modules/@aws-cdk/aws-ec2/lib/vpc.js:461:32)",
+              "Vpc.createSubnets (/tmp/jsii-kernel-4OoBOB/node_modules/@aws-cdk/aws-ec2/lib/vpc.js:457:18)",
+              "new Vpc (/tmp/jsii-kernel-4OoBOB/node_modules/@aws-cdk/aws-ec2/lib/vpc.js:282:14)",
+              "obj._wrapSandboxCode (/home/ec2-user/environment/workshop/.env/lib/python3.6/dist-packages/jsii/_embedded/jsii/jsii-runtime.js:6992:49)",
+              "Kernel._wrapSandboxCode (/home/ec2-user/environment/workshop/.env/lib/python3.6/dist-packages/jsii/_embedded/jsii/jsii-runtime.js:7444:20)",
+              "Kernel._create (/home/ec2-user/environment/workshop/.env/lib/python3.6/dist-packages/jsii/_embedded/jsii/jsii-runtime.js:6992:26)",
+              "Kernel.create (/home/ec2-user/environment/workshop/.env/lib/python3.6/dist-packages/jsii/_embedded/jsii/jsii-runtime.js:6746:21)",
+              "KernelHost.processRequest (/home/ec2-user/environment/workshop/.env/lib/python3.6/dist-packages/jsii/_embedded/jsii/jsii-runtime.js:6521:28)",
+              "KernelHost.run (/home/ec2-user/environment/workshop/.env/lib/python3.6/dist-packages/jsii/_embedded/jsii/jsii-runtime.js:6464:14)",
+              "Immediate.setImmediate [as _onImmediate] (/home/ec2-user/environment/workshop/.env/lib/python3.6/dist-packages/jsii/_embedded/jsii/jsii-runtime.js:6467:37)",
+              "runCallback (timers.js:705:18)",
+              "tryOnImmediate (timers.js:676:5)",
+              "processImmediate (timers.js:658:5)"
+            ]
+          }
+        ],
+        "/workshop/MyTestVpc/PublicSubnet2/RouteTable": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "MyTestVpcPublicSubnet2RouteTableE0D83E2C",
+            "trace": [
+              "new Subnet (/tmp/jsii-kernel-4OoBOB/node_modules/@aws-cdk/aws-ec2/lib/vpc.js:563:23)",
+              "new PublicSubnet (/tmp/jsii-kernel-4OoBOB/node_modules/@aws-cdk/aws-ec2/lib/vpc.js:642:9)",
+              "availabilityZones.forEach (/tmp/jsii-kernel-4OoBOB/node_modules/@aws-cdk/aws-ec2/lib/vpc.js:477:42)",
+              "Array.forEach (<anonymous>)",
+              "Vpc.createSubnetResources (/tmp/jsii-kernel-4OoBOB/node_modules/@aws-cdk/aws-ec2/lib/vpc.js:461:32)",
+              "Vpc.createSubnets (/tmp/jsii-kernel-4OoBOB/node_modules/@aws-cdk/aws-ec2/lib/vpc.js:457:18)",
+              "new Vpc (/tmp/jsii-kernel-4OoBOB/node_modules/@aws-cdk/aws-ec2/lib/vpc.js:282:14)",
+              "obj._wrapSandboxCode (/home/ec2-user/environment/workshop/.env/lib/python3.6/dist-packages/jsii/_embedded/jsii/jsii-runtime.js:6992:49)",
+              "Kernel._wrapSandboxCode (/home/ec2-user/environment/workshop/.env/lib/python3.6/dist-packages/jsii/_embedded/jsii/jsii-runtime.js:7444:20)",
+              "Kernel._create (/home/ec2-user/environment/workshop/.env/lib/python3.6/dist-packages/jsii/_embedded/jsii/jsii-runtime.js:6992:26)",
+              "Kernel.create (/home/ec2-user/environment/workshop/.env/lib/python3.6/dist-packages/jsii/_embedded/jsii/jsii-runtime.js:6746:21)",
+              "KernelHost.processRequest (/home/ec2-user/environment/workshop/.env/lib/python3.6/dist-packages/jsii/_embedded/jsii/jsii-runtime.js:6521:28)",
+              "KernelHost.run (/home/ec2-user/environment/workshop/.env/lib/python3.6/dist-packages/jsii/_embedded/jsii/jsii-runtime.js:6464:14)",
+              "Immediate.setImmediate [as _onImmediate] (/home/ec2-user/environment/workshop/.env/lib/python3.6/dist-packages/jsii/_embedded/jsii/jsii-runtime.js:6467:37)",
+              "runCallback (timers.js:705:18)",
+              "tryOnImmediate (timers.js:676:5)",
+              "processImmediate (timers.js:658:5)"
+            ]
+          }
+        ],
+        "/workshop/MyTestVpc/PublicSubnet2/RouteTableAssociation": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "MyTestVpcPublicSubnet2RouteTableAssociationD187587B",
+            "trace": [
+              "new Subnet (/tmp/jsii-kernel-4OoBOB/node_modules/@aws-cdk/aws-ec2/lib/vpc.js:568:9)",
+              "new PublicSubnet (/tmp/jsii-kernel-4OoBOB/node_modules/@aws-cdk/aws-ec2/lib/vpc.js:642:9)",
+              "availabilityZones.forEach (/tmp/jsii-kernel-4OoBOB/node_modules/@aws-cdk/aws-ec2/lib/vpc.js:477:42)",
+              "Array.forEach (<anonymous>)",
+              "Vpc.createSubnetResources (/tmp/jsii-kernel-4OoBOB/node_modules/@aws-cdk/aws-ec2/lib/vpc.js:461:32)",
+              "Vpc.createSubnets (/tmp/jsii-kernel-4OoBOB/node_modules/@aws-cdk/aws-ec2/lib/vpc.js:457:18)",
+              "new Vpc (/tmp/jsii-kernel-4OoBOB/node_modules/@aws-cdk/aws-ec2/lib/vpc.js:282:14)",
+              "obj._wrapSandboxCode (/home/ec2-user/environment/workshop/.env/lib/python3.6/dist-packages/jsii/_embedded/jsii/jsii-runtime.js:6992:49)",
+              "Kernel._wrapSandboxCode (/home/ec2-user/environment/workshop/.env/lib/python3.6/dist-packages/jsii/_embedded/jsii/jsii-runtime.js:7444:20)",
+              "Kernel._create (/home/ec2-user/environment/workshop/.env/lib/python3.6/dist-packages/jsii/_embedded/jsii/jsii-runtime.js:6992:26)",
+              "Kernel.create (/home/ec2-user/environment/workshop/.env/lib/python3.6/dist-packages/jsii/_embedded/jsii/jsii-runtime.js:6746:21)",
+              "KernelHost.processRequest (/home/ec2-user/environment/workshop/.env/lib/python3.6/dist-packages/jsii/_embedded/jsii/jsii-runtime.js:6521:28)",
+              "KernelHost.run (/home/ec2-user/environment/workshop/.env/lib/python3.6/dist-packages/jsii/_embedded/jsii/jsii-runtime.js:6464:14)",
+              "Immediate.setImmediate [as _onImmediate] (/home/ec2-user/environment/workshop/.env/lib/python3.6/dist-packages/jsii/_embedded/jsii/jsii-runtime.js:6467:37)",
+              "runCallback (timers.js:705:18)",
+              "tryOnImmediate (timers.js:676:5)",
+              "processImmediate (timers.js:658:5)"
+            ]
+          }
+        ],
+        "/workshop/MyTestVpc/PublicSubnet2/DefaultRoute": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "MyTestVpcPublicSubnet2DefaultRoute25480A68",
+            "trace": [
+              "PublicSubnet.addDefaultInternetRoute (/tmp/jsii-kernel-4OoBOB/node_modules/@aws-cdk/aws-ec2/lib/vpc.js:588:23)",
+              "Vpc.publicSubnets.forEach.publicSubnet (/tmp/jsii-kernel-4OoBOB/node_modules/@aws-cdk/aws-ec2/lib/vpc.js:293:30)",
+              "Array.forEach (<anonymous>)",
+              "new Vpc (/tmp/jsii-kernel-4OoBOB/node_modules/@aws-cdk/aws-ec2/lib/vpc.js:292:32)",
+              "obj._wrapSandboxCode (/home/ec2-user/environment/workshop/.env/lib/python3.6/dist-packages/jsii/_embedded/jsii/jsii-runtime.js:6992:49)",
+              "Kernel._wrapSandboxCode (/home/ec2-user/environment/workshop/.env/lib/python3.6/dist-packages/jsii/_embedded/jsii/jsii-runtime.js:7444:20)",
+              "Kernel._create (/home/ec2-user/environment/workshop/.env/lib/python3.6/dist-packages/jsii/_embedded/jsii/jsii-runtime.js:6992:26)",
+              "Kernel.create (/home/ec2-user/environment/workshop/.env/lib/python3.6/dist-packages/jsii/_embedded/jsii/jsii-runtime.js:6746:21)",
+              "KernelHost.processRequest (/home/ec2-user/environment/workshop/.env/lib/python3.6/dist-packages/jsii/_embedded/jsii/jsii-runtime.js:6521:28)",
+              "KernelHost.run (/home/ec2-user/environment/workshop/.env/lib/python3.6/dist-packages/jsii/_embedded/jsii/jsii-runtime.js:6464:14)",
+              "Immediate.setImmediate [as _onImmediate] (/home/ec2-user/environment/workshop/.env/lib/python3.6/dist-packages/jsii/_embedded/jsii/jsii-runtime.js:6467:37)",
+              "runCallback (timers.js:705:18)",
+              "tryOnImmediate (timers.js:676:5)",
+              "processImmediate (timers.js:658:5)"
+            ]
+          }
+        ],
+        "/workshop/MyTestVpc/PublicSubnet2/EIP": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "MyTestVpcPublicSubnet2EIP46C9597E",
+            "trace": [
+              "PublicSubnet.addNatGateway (/tmp/jsii-kernel-4OoBOB/node_modules/@aws-cdk/aws-ec2/lib/vpc.js:653:27)",
+              "Vpc.createNatGateways (/tmp/jsii-kernel-4OoBOB/node_modules/@aws-cdk/aws-ec2/lib/vpc.js:436:33)",
+              "new Vpc (/tmp/jsii-kernel-4OoBOB/node_modules/@aws-cdk/aws-ec2/lib/vpc.js:297:22)",
+              "obj._wrapSandboxCode (/home/ec2-user/environment/workshop/.env/lib/python3.6/dist-packages/jsii/_embedded/jsii/jsii-runtime.js:6992:49)",
+              "Kernel._wrapSandboxCode (/home/ec2-user/environment/workshop/.env/lib/python3.6/dist-packages/jsii/_embedded/jsii/jsii-runtime.js:7444:20)",
+              "Kernel._create (/home/ec2-user/environment/workshop/.env/lib/python3.6/dist-packages/jsii/_embedded/jsii/jsii-runtime.js:6992:26)",
+              "Kernel.create (/home/ec2-user/environment/workshop/.env/lib/python3.6/dist-packages/jsii/_embedded/jsii/jsii-runtime.js:6746:21)",
+              "KernelHost.processRequest (/home/ec2-user/environment/workshop/.env/lib/python3.6/dist-packages/jsii/_embedded/jsii/jsii-runtime.js:6521:28)",
+              "KernelHost.run (/home/ec2-user/environment/workshop/.env/lib/python3.6/dist-packages/jsii/_embedded/jsii/jsii-runtime.js:6464:14)",
+              "Immediate.setImmediate [as _onImmediate] (/home/ec2-user/environment/workshop/.env/lib/python3.6/dist-packages/jsii/_embedded/jsii/jsii-runtime.js:6467:37)",
+              "runCallback (timers.js:705:18)",
+              "tryOnImmediate (timers.js:676:5)",
+              "processImmediate (timers.js:658:5)"
+            ]
+          }
+        ],
+        "/workshop/MyTestVpc/PublicSubnet2/NATGateway": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "MyTestVpcPublicSubnet2NATGateway7DE3C708",
+            "trace": [
+              "PublicSubnet.addNatGateway (/tmp/jsii-kernel-4OoBOB/node_modules/@aws-cdk/aws-ec2/lib/vpc.js:651:21)",
+              "Vpc.createNatGateways (/tmp/jsii-kernel-4OoBOB/node_modules/@aws-cdk/aws-ec2/lib/vpc.js:436:33)",
+              "new Vpc (/tmp/jsii-kernel-4OoBOB/node_modules/@aws-cdk/aws-ec2/lib/vpc.js:297:22)",
+              "obj._wrapSandboxCode (/home/ec2-user/environment/workshop/.env/lib/python3.6/dist-packages/jsii/_embedded/jsii/jsii-runtime.js:6992:49)",
+              "Kernel._wrapSandboxCode (/home/ec2-user/environment/workshop/.env/lib/python3.6/dist-packages/jsii/_embedded/jsii/jsii-runtime.js:7444:20)",
+              "Kernel._create (/home/ec2-user/environment/workshop/.env/lib/python3.6/dist-packages/jsii/_embedded/jsii/jsii-runtime.js:6992:26)",
+              "Kernel.create (/home/ec2-user/environment/workshop/.env/lib/python3.6/dist-packages/jsii/_embedded/jsii/jsii-runtime.js:6746:21)",
+              "KernelHost.processRequest (/home/ec2-user/environment/workshop/.env/lib/python3.6/dist-packages/jsii/_embedded/jsii/jsii-runtime.js:6521:28)",
+              "KernelHost.run (/home/ec2-user/environment/workshop/.env/lib/python3.6/dist-packages/jsii/_embedded/jsii/jsii-runtime.js:6464:14)",
+              "Immediate.setImmediate [as _onImmediate] (/home/ec2-user/environment/workshop/.env/lib/python3.6/dist-packages/jsii/_embedded/jsii/jsii-runtime.js:6467:37)",
+              "runCallback (timers.js:705:18)",
+              "tryOnImmediate (timers.js:676:5)",
+              "processImmediate (timers.js:658:5)"
+            ]
+          }
+        ],
+        "/workshop/MyTestVpc/PrivateSubnet1/Subnet": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "MyTestVpcPrivateSubnet1SubnetB29DFA33",
+            "trace": [
+              "new Subnet (/tmp/jsii-kernel-4OoBOB/node_modules/@aws-cdk/aws-ec2/lib/vpc.js:548:24)",
+              "new PrivateSubnet (/tmp/jsii-kernel-4OoBOB/node_modules/@aws-cdk/aws-ec2/lib/vpc.js:669:9)",
+              "availabilityZones.forEach (/tmp/jsii-kernel-4OoBOB/node_modules/@aws-cdk/aws-ec2/lib/vpc.js:482:43)",
+              "Array.forEach (<anonymous>)",
+              "Vpc.createSubnetResources (/tmp/jsii-kernel-4OoBOB/node_modules/@aws-cdk/aws-ec2/lib/vpc.js:461:32)",
+              "Vpc.createSubnets (/tmp/jsii-kernel-4OoBOB/node_modules/@aws-cdk/aws-ec2/lib/vpc.js:457:18)",
+              "new Vpc (/tmp/jsii-kernel-4OoBOB/node_modules/@aws-cdk/aws-ec2/lib/vpc.js:282:14)",
+              "obj._wrapSandboxCode (/home/ec2-user/environment/workshop/.env/lib/python3.6/dist-packages/jsii/_embedded/jsii/jsii-runtime.js:6992:49)",
+              "Kernel._wrapSandboxCode (/home/ec2-user/environment/workshop/.env/lib/python3.6/dist-packages/jsii/_embedded/jsii/jsii-runtime.js:7444:20)",
+              "Kernel._create (/home/ec2-user/environment/workshop/.env/lib/python3.6/dist-packages/jsii/_embedded/jsii/jsii-runtime.js:6992:26)",
+              "Kernel.create (/home/ec2-user/environment/workshop/.env/lib/python3.6/dist-packages/jsii/_embedded/jsii/jsii-runtime.js:6746:21)",
+              "KernelHost.processRequest (/home/ec2-user/environment/workshop/.env/lib/python3.6/dist-packages/jsii/_embedded/jsii/jsii-runtime.js:6521:28)",
+              "KernelHost.run (/home/ec2-user/environment/workshop/.env/lib/python3.6/dist-packages/jsii/_embedded/jsii/jsii-runtime.js:6464:14)",
+              "Immediate.setImmediate [as _onImmediate] (/home/ec2-user/environment/workshop/.env/lib/python3.6/dist-packages/jsii/_embedded/jsii/jsii-runtime.js:6467:37)",
+              "runCallback (timers.js:705:18)",
+              "tryOnImmediate (timers.js:676:5)",
+              "processImmediate (timers.js:658:5)"
+            ]
+          }
+        ],
+        "/workshop/MyTestVpc/PrivateSubnet1/RouteTable": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "MyTestVpcPrivateSubnet1RouteTableCAB302BE",
+            "trace": [
+              "new Subnet (/tmp/jsii-kernel-4OoBOB/node_modules/@aws-cdk/aws-ec2/lib/vpc.js:563:23)",
+              "new PrivateSubnet (/tmp/jsii-kernel-4OoBOB/node_modules/@aws-cdk/aws-ec2/lib/vpc.js:669:9)",
+              "availabilityZones.forEach (/tmp/jsii-kernel-4OoBOB/node_modules/@aws-cdk/aws-ec2/lib/vpc.js:482:43)",
+              "Array.forEach (<anonymous>)",
+              "Vpc.createSubnetResources (/tmp/jsii-kernel-4OoBOB/node_modules/@aws-cdk/aws-ec2/lib/vpc.js:461:32)",
+              "Vpc.createSubnets (/tmp/jsii-kernel-4OoBOB/node_modules/@aws-cdk/aws-ec2/lib/vpc.js:457:18)",
+              "new Vpc (/tmp/jsii-kernel-4OoBOB/node_modules/@aws-cdk/aws-ec2/lib/vpc.js:282:14)",
+              "obj._wrapSandboxCode (/home/ec2-user/environment/workshop/.env/lib/python3.6/dist-packages/jsii/_embedded/jsii/jsii-runtime.js:6992:49)",
+              "Kernel._wrapSandboxCode (/home/ec2-user/environment/workshop/.env/lib/python3.6/dist-packages/jsii/_embedded/jsii/jsii-runtime.js:7444:20)",
+              "Kernel._create (/home/ec2-user/environment/workshop/.env/lib/python3.6/dist-packages/jsii/_embedded/jsii/jsii-runtime.js:6992:26)",
+              "Kernel.create (/home/ec2-user/environment/workshop/.env/lib/python3.6/dist-packages/jsii/_embedded/jsii/jsii-runtime.js:6746:21)",
+              "KernelHost.processRequest (/home/ec2-user/environment/workshop/.env/lib/python3.6/dist-packages/jsii/_embedded/jsii/jsii-runtime.js:6521:28)",
+              "KernelHost.run (/home/ec2-user/environment/workshop/.env/lib/python3.6/dist-packages/jsii/_embedded/jsii/jsii-runtime.js:6464:14)",
+              "Immediate.setImmediate [as _onImmediate] (/home/ec2-user/environment/workshop/.env/lib/python3.6/dist-packages/jsii/_embedded/jsii/jsii-runtime.js:6467:37)",
+              "runCallback (timers.js:705:18)",
+              "tryOnImmediate (timers.js:676:5)",
+              "processImmediate (timers.js:658:5)"
+            ]
+          }
+        ],
+        "/workshop/MyTestVpc/PrivateSubnet1/RouteTableAssociation": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "MyTestVpcPrivateSubnet1RouteTableAssociation13FF36EA",
+            "trace": [
+              "new Subnet (/tmp/jsii-kernel-4OoBOB/node_modules/@aws-cdk/aws-ec2/lib/vpc.js:568:9)",
+              "new PrivateSubnet (/tmp/jsii-kernel-4OoBOB/node_modules/@aws-cdk/aws-ec2/lib/vpc.js:669:9)",
+              "availabilityZones.forEach (/tmp/jsii-kernel-4OoBOB/node_modules/@aws-cdk/aws-ec2/lib/vpc.js:482:43)",
+              "Array.forEach (<anonymous>)",
+              "Vpc.createSubnetResources (/tmp/jsii-kernel-4OoBOB/node_modules/@aws-cdk/aws-ec2/lib/vpc.js:461:32)",
+              "Vpc.createSubnets (/tmp/jsii-kernel-4OoBOB/node_modules/@aws-cdk/aws-ec2/lib/vpc.js:457:18)",
+              "new Vpc (/tmp/jsii-kernel-4OoBOB/node_modules/@aws-cdk/aws-ec2/lib/vpc.js:282:14)",
+              "obj._wrapSandboxCode (/home/ec2-user/environment/workshop/.env/lib/python3.6/dist-packages/jsii/_embedded/jsii/jsii-runtime.js:6992:49)",
+              "Kernel._wrapSandboxCode (/home/ec2-user/environment/workshop/.env/lib/python3.6/dist-packages/jsii/_embedded/jsii/jsii-runtime.js:7444:20)",
+              "Kernel._create (/home/ec2-user/environment/workshop/.env/lib/python3.6/dist-packages/jsii/_embedded/jsii/jsii-runtime.js:6992:26)",
+              "Kernel.create (/home/ec2-user/environment/workshop/.env/lib/python3.6/dist-packages/jsii/_embedded/jsii/jsii-runtime.js:6746:21)",
+              "KernelHost.processRequest (/home/ec2-user/environment/workshop/.env/lib/python3.6/dist-packages/jsii/_embedded/jsii/jsii-runtime.js:6521:28)",
+              "KernelHost.run (/home/ec2-user/environment/workshop/.env/lib/python3.6/dist-packages/jsii/_embedded/jsii/jsii-runtime.js:6464:14)",
+              "Immediate.setImmediate [as _onImmediate] (/home/ec2-user/environment/workshop/.env/lib/python3.6/dist-packages/jsii/_embedded/jsii/jsii-runtime.js:6467:37)",
+              "runCallback (timers.js:705:18)",
+              "tryOnImmediate (timers.js:676:5)",
+              "processImmediate (timers.js:658:5)"
+            ]
+          }
+        ],
+        "/workshop/MyTestVpc/PrivateSubnet1/DefaultRoute": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "MyTestVpcPrivateSubnet1DefaultRoute65831044",
+            "trace": [
+              "PrivateSubnet.addDefaultNatRoute (/tmp/jsii-kernel-4OoBOB/node_modules/@aws-cdk/aws-ec2/lib/vpc.js:616:23)",
+              "Vpc.privateSubnets.forEach (/tmp/jsii-kernel-4OoBOB/node_modules/@aws-cdk/aws-ec2/lib/vpc.js:305:35)",
+              "Array.forEach (<anonymous>)",
+              "new Vpc (/tmp/jsii-kernel-4OoBOB/node_modules/@aws-cdk/aws-ec2/lib/vpc.js:298:37)",
+              "obj._wrapSandboxCode (/home/ec2-user/environment/workshop/.env/lib/python3.6/dist-packages/jsii/_embedded/jsii/jsii-runtime.js:6992:49)",
+              "Kernel._wrapSandboxCode (/home/ec2-user/environment/workshop/.env/lib/python3.6/dist-packages/jsii/_embedded/jsii/jsii-runtime.js:7444:20)",
+              "Kernel._create (/home/ec2-user/environment/workshop/.env/lib/python3.6/dist-packages/jsii/_embedded/jsii/jsii-runtime.js:6992:26)",
+              "Kernel.create (/home/ec2-user/environment/workshop/.env/lib/python3.6/dist-packages/jsii/_embedded/jsii/jsii-runtime.js:6746:21)",
+              "KernelHost.processRequest (/home/ec2-user/environment/workshop/.env/lib/python3.6/dist-packages/jsii/_embedded/jsii/jsii-runtime.js:6521:28)",
+              "KernelHost.run (/home/ec2-user/environment/workshop/.env/lib/python3.6/dist-packages/jsii/_embedded/jsii/jsii-runtime.js:6464:14)",
+              "Immediate.setImmediate [as _onImmediate] (/home/ec2-user/environment/workshop/.env/lib/python3.6/dist-packages/jsii/_embedded/jsii/jsii-runtime.js:6467:37)",
+              "runCallback (timers.js:705:18)",
+              "tryOnImmediate (timers.js:676:5)",
+              "processImmediate (timers.js:658:5)"
+            ]
+          }
+        ],
+        "/workshop/MyTestVpc/PrivateSubnet2/Subnet": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "MyTestVpcPrivateSubnet2Subnet2D9A0D84",
+            "trace": [
+              "new Subnet (/tmp/jsii-kernel-4OoBOB/node_modules/@aws-cdk/aws-ec2/lib/vpc.js:548:24)",
+              "new PrivateSubnet (/tmp/jsii-kernel-4OoBOB/node_modules/@aws-cdk/aws-ec2/lib/vpc.js:669:9)",
+              "availabilityZones.forEach (/tmp/jsii-kernel-4OoBOB/node_modules/@aws-cdk/aws-ec2/lib/vpc.js:482:43)",
+              "Array.forEach (<anonymous>)",
+              "Vpc.createSubnetResources (/tmp/jsii-kernel-4OoBOB/node_modules/@aws-cdk/aws-ec2/lib/vpc.js:461:32)",
+              "Vpc.createSubnets (/tmp/jsii-kernel-4OoBOB/node_modules/@aws-cdk/aws-ec2/lib/vpc.js:457:18)",
+              "new Vpc (/tmp/jsii-kernel-4OoBOB/node_modules/@aws-cdk/aws-ec2/lib/vpc.js:282:14)",
+              "obj._wrapSandboxCode (/home/ec2-user/environment/workshop/.env/lib/python3.6/dist-packages/jsii/_embedded/jsii/jsii-runtime.js:6992:49)",
+              "Kernel._wrapSandboxCode (/home/ec2-user/environment/workshop/.env/lib/python3.6/dist-packages/jsii/_embedded/jsii/jsii-runtime.js:7444:20)",
+              "Kernel._create (/home/ec2-user/environment/workshop/.env/lib/python3.6/dist-packages/jsii/_embedded/jsii/jsii-runtime.js:6992:26)",
+              "Kernel.create (/home/ec2-user/environment/workshop/.env/lib/python3.6/dist-packages/jsii/_embedded/jsii/jsii-runtime.js:6746:21)",
+              "KernelHost.processRequest (/home/ec2-user/environment/workshop/.env/lib/python3.6/dist-packages/jsii/_embedded/jsii/jsii-runtime.js:6521:28)",
+              "KernelHost.run (/home/ec2-user/environment/workshop/.env/lib/python3.6/dist-packages/jsii/_embedded/jsii/jsii-runtime.js:6464:14)",
+              "Immediate.setImmediate [as _onImmediate] (/home/ec2-user/environment/workshop/.env/lib/python3.6/dist-packages/jsii/_embedded/jsii/jsii-runtime.js:6467:37)",
+              "runCallback (timers.js:705:18)",
+              "tryOnImmediate (timers.js:676:5)",
+              "processImmediate (timers.js:658:5)"
+            ]
+          }
+        ],
+        "/workshop/MyTestVpc/PrivateSubnet2/RouteTable": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "MyTestVpcPrivateSubnet2RouteTableC6EC54E3",
+            "trace": [
+              "new Subnet (/tmp/jsii-kernel-4OoBOB/node_modules/@aws-cdk/aws-ec2/lib/vpc.js:563:23)",
+              "new PrivateSubnet (/tmp/jsii-kernel-4OoBOB/node_modules/@aws-cdk/aws-ec2/lib/vpc.js:669:9)",
+              "availabilityZones.forEach (/tmp/jsii-kernel-4OoBOB/node_modules/@aws-cdk/aws-ec2/lib/vpc.js:482:43)",
+              "Array.forEach (<anonymous>)",
+              "Vpc.createSubnetResources (/tmp/jsii-kernel-4OoBOB/node_modules/@aws-cdk/aws-ec2/lib/vpc.js:461:32)",
+              "Vpc.createSubnets (/tmp/jsii-kernel-4OoBOB/node_modules/@aws-cdk/aws-ec2/lib/vpc.js:457:18)",
+              "new Vpc (/tmp/jsii-kernel-4OoBOB/node_modules/@aws-cdk/aws-ec2/lib/vpc.js:282:14)",
+              "obj._wrapSandboxCode (/home/ec2-user/environment/workshop/.env/lib/python3.6/dist-packages/jsii/_embedded/jsii/jsii-runtime.js:6992:49)",
+              "Kernel._wrapSandboxCode (/home/ec2-user/environment/workshop/.env/lib/python3.6/dist-packages/jsii/_embedded/jsii/jsii-runtime.js:7444:20)",
+              "Kernel._create (/home/ec2-user/environment/workshop/.env/lib/python3.6/dist-packages/jsii/_embedded/jsii/jsii-runtime.js:6992:26)",
+              "Kernel.create (/home/ec2-user/environment/workshop/.env/lib/python3.6/dist-packages/jsii/_embedded/jsii/jsii-runtime.js:6746:21)",
+              "KernelHost.processRequest (/home/ec2-user/environment/workshop/.env/lib/python3.6/dist-packages/jsii/_embedded/jsii/jsii-runtime.js:6521:28)",
+              "KernelHost.run (/home/ec2-user/environment/workshop/.env/lib/python3.6/dist-packages/jsii/_embedded/jsii/jsii-runtime.js:6464:14)",
+              "Immediate.setImmediate [as _onImmediate] (/home/ec2-user/environment/workshop/.env/lib/python3.6/dist-packages/jsii/_embedded/jsii/jsii-runtime.js:6467:37)",
+              "runCallback (timers.js:705:18)",
+              "tryOnImmediate (timers.js:676:5)",
+              "processImmediate (timers.js:658:5)"
+            ]
+          }
+        ],
+        "/workshop/MyTestVpc/PrivateSubnet2/RouteTableAssociation": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "MyTestVpcPrivateSubnet2RouteTableAssociation64764335",
+            "trace": [
+              "new Subnet (/tmp/jsii-kernel-4OoBOB/node_modules/@aws-cdk/aws-ec2/lib/vpc.js:568:9)",
+              "new PrivateSubnet (/tmp/jsii-kernel-4OoBOB/node_modules/@aws-cdk/aws-ec2/lib/vpc.js:669:9)",
+              "availabilityZones.forEach (/tmp/jsii-kernel-4OoBOB/node_modules/@aws-cdk/aws-ec2/lib/vpc.js:482:43)",
+              "Array.forEach (<anonymous>)",
+              "Vpc.createSubnetResources (/tmp/jsii-kernel-4OoBOB/node_modules/@aws-cdk/aws-ec2/lib/vpc.js:461:32)",
+              "Vpc.createSubnets (/tmp/jsii-kernel-4OoBOB/node_modules/@aws-cdk/aws-ec2/lib/vpc.js:457:18)",
+              "new Vpc (/tmp/jsii-kernel-4OoBOB/node_modules/@aws-cdk/aws-ec2/lib/vpc.js:282:14)",
+              "obj._wrapSandboxCode (/home/ec2-user/environment/workshop/.env/lib/python3.6/dist-packages/jsii/_embedded/jsii/jsii-runtime.js:6992:49)",
+              "Kernel._wrapSandboxCode (/home/ec2-user/environment/workshop/.env/lib/python3.6/dist-packages/jsii/_embedded/jsii/jsii-runtime.js:7444:20)",
+              "Kernel._create (/home/ec2-user/environment/workshop/.env/lib/python3.6/dist-packages/jsii/_embedded/jsii/jsii-runtime.js:6992:26)",
+              "Kernel.create (/home/ec2-user/environment/workshop/.env/lib/python3.6/dist-packages/jsii/_embedded/jsii/jsii-runtime.js:6746:21)",
+              "KernelHost.processRequest (/home/ec2-user/environment/workshop/.env/lib/python3.6/dist-packages/jsii/_embedded/jsii/jsii-runtime.js:6521:28)",
+              "KernelHost.run (/home/ec2-user/environment/workshop/.env/lib/python3.6/dist-packages/jsii/_embedded/jsii/jsii-runtime.js:6464:14)",
+              "Immediate.setImmediate [as _onImmediate] (/home/ec2-user/environment/workshop/.env/lib/python3.6/dist-packages/jsii/_embedded/jsii/jsii-runtime.js:6467:37)",
+              "runCallback (timers.js:705:18)",
+              "tryOnImmediate (timers.js:676:5)",
+              "processImmediate (timers.js:658:5)"
+            ]
+          }
+        ],
+        "/workshop/MyTestVpc/PrivateSubnet2/DefaultRoute": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "MyTestVpcPrivateSubnet2DefaultRoute184FEACC",
+            "trace": [
+              "PrivateSubnet.addDefaultNatRoute (/tmp/jsii-kernel-4OoBOB/node_modules/@aws-cdk/aws-ec2/lib/vpc.js:616:23)",
+              "Vpc.privateSubnets.forEach (/tmp/jsii-kernel-4OoBOB/node_modules/@aws-cdk/aws-ec2/lib/vpc.js:305:35)",
+              "Array.forEach (<anonymous>)",
+              "new Vpc (/tmp/jsii-kernel-4OoBOB/node_modules/@aws-cdk/aws-ec2/lib/vpc.js:298:37)",
+              "obj._wrapSandboxCode (/home/ec2-user/environment/workshop/.env/lib/python3.6/dist-packages/jsii/_embedded/jsii/jsii-runtime.js:6992:49)",
+              "Kernel._wrapSandboxCode (/home/ec2-user/environment/workshop/.env/lib/python3.6/dist-packages/jsii/_embedded/jsii/jsii-runtime.js:7444:20)",
+              "Kernel._create (/home/ec2-user/environment/workshop/.env/lib/python3.6/dist-packages/jsii/_embedded/jsii/jsii-runtime.js:6992:26)",
+              "Kernel.create (/home/ec2-user/environment/workshop/.env/lib/python3.6/dist-packages/jsii/_embedded/jsii/jsii-runtime.js:6746:21)",
+              "KernelHost.processRequest (/home/ec2-user/environment/workshop/.env/lib/python3.6/dist-packages/jsii/_embedded/jsii/jsii-runtime.js:6521:28)",
+              "KernelHost.run (/home/ec2-user/environment/workshop/.env/lib/python3.6/dist-packages/jsii/_embedded/jsii/jsii-runtime.js:6464:14)",
+              "Immediate.setImmediate [as _onImmediate] (/home/ec2-user/environment/workshop/.env/lib/python3.6/dist-packages/jsii/_embedded/jsii/jsii-runtime.js:6467:37)",
+              "runCallback (timers.js:705:18)",
+              "tryOnImmediate (timers.js:676:5)",
+              "processImmediate (timers.js:658:5)"
+            ]
+          }
+        ],
+        "/workshop/MyTestVpc/IGW": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "MyTestVpcIGW872B5B74",
+            "trace": [
+              "new Vpc (/tmp/jsii-kernel-4OoBOB/node_modules/@aws-cdk/aws-ec2/lib/vpc.js:286:25)",
+              "obj._wrapSandboxCode (/home/ec2-user/environment/workshop/.env/lib/python3.6/dist-packages/jsii/_embedded/jsii/jsii-runtime.js:6992:49)",
+              "Kernel._wrapSandboxCode (/home/ec2-user/environment/workshop/.env/lib/python3.6/dist-packages/jsii/_embedded/jsii/jsii-runtime.js:7444:20)",
+              "Kernel._create (/home/ec2-user/environment/workshop/.env/lib/python3.6/dist-packages/jsii/_embedded/jsii/jsii-runtime.js:6992:26)",
+              "Kernel.create (/home/ec2-user/environment/workshop/.env/lib/python3.6/dist-packages/jsii/_embedded/jsii/jsii-runtime.js:6746:21)",
+              "KernelHost.processRequest (/home/ec2-user/environment/workshop/.env/lib/python3.6/dist-packages/jsii/_embedded/jsii/jsii-runtime.js:6521:28)",
+              "KernelHost.run (/home/ec2-user/environment/workshop/.env/lib/python3.6/dist-packages/jsii/_embedded/jsii/jsii-runtime.js:6464:14)",
+              "Immediate.setImmediate [as _onImmediate] (/home/ec2-user/environment/workshop/.env/lib/python3.6/dist-packages/jsii/_embedded/jsii/jsii-runtime.js:6467:37)",
+              "runCallback (timers.js:705:18)",
+              "tryOnImmediate (timers.js:676:5)",
+              "processImmediate (timers.js:658:5)"
+            ]
+          }
+        ],
+        "/workshop/MyTestVpc/VPCGW": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "MyTestVpcVPCGWFCF9AAB8",
+            "trace": [
+              "new Vpc (/tmp/jsii-kernel-4OoBOB/node_modules/@aws-cdk/aws-ec2/lib/vpc.js:288:25)",
+              "obj._wrapSandboxCode (/home/ec2-user/environment/workshop/.env/lib/python3.6/dist-packages/jsii/_embedded/jsii/jsii-runtime.js:6992:49)",
+              "Kernel._wrapSandboxCode (/home/ec2-user/environment/workshop/.env/lib/python3.6/dist-packages/jsii/_embedded/jsii/jsii-runtime.js:7444:20)",
+              "Kernel._create (/home/ec2-user/environment/workshop/.env/lib/python3.6/dist-packages/jsii/_embedded/jsii/jsii-runtime.js:6992:26)",
+              "Kernel.create (/home/ec2-user/environment/workshop/.env/lib/python3.6/dist-packages/jsii/_embedded/jsii/jsii-runtime.js:6746:21)",
+              "KernelHost.processRequest (/home/ec2-user/environment/workshop/.env/lib/python3.6/dist-packages/jsii/_embedded/jsii/jsii-runtime.js:6521:28)",
+              "KernelHost.run (/home/ec2-user/environment/workshop/.env/lib/python3.6/dist-packages/jsii/_embedded/jsii/jsii-runtime.js:6464:14)",
+              "Immediate.setImmediate [as _onImmediate] (/home/ec2-user/environment/workshop/.env/lib/python3.6/dist-packages/jsii/_embedded/jsii/jsii-runtime.js:6467:37)",
+              "runCallback (timers.js:705:18)",
+              "tryOnImmediate (timers.js:676:5)",
+              "processImmediate (timers.js:658:5)"
+            ]
+          }
+        ],
+        "/workshop/MyTestInstance/InstanceSecurityGroup/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "MyTestInstanceInstanceSecurityGroupB90B57AB",
+            "trace": [
+              "new SecurityGroup (/tmp/jsii-kernel-4OoBOB/node_modules/@aws-cdk/aws-ec2/lib/security-group.js:131:30)",
+              "new Instance (/tmp/jsii-kernel-4OoBOB/node_modules/@aws-cdk/aws-ec2/lib/instance.js:24:34)",
+              "obj._wrapSandboxCode (/home/ec2-user/environment/workshop/.env/lib/python3.6/dist-packages/jsii/_embedded/jsii/jsii-runtime.js:6992:49)",
+              "Kernel._wrapSandboxCode (/home/ec2-user/environment/workshop/.env/lib/python3.6/dist-packages/jsii/_embedded/jsii/jsii-runtime.js:7444:20)",
+              "Kernel._create (/home/ec2-user/environment/workshop/.env/lib/python3.6/dist-packages/jsii/_embedded/jsii/jsii-runtime.js:6992:26)",
+              "Kernel.create (/home/ec2-user/environment/workshop/.env/lib/python3.6/dist-packages/jsii/_embedded/jsii/jsii-runtime.js:6746:21)",
+              "KernelHost.processRequest (/home/ec2-user/environment/workshop/.env/lib/python3.6/dist-packages/jsii/_embedded/jsii/jsii-runtime.js:6521:28)",
+              "KernelHost.run (/home/ec2-user/environment/workshop/.env/lib/python3.6/dist-packages/jsii/_embedded/jsii/jsii-runtime.js:6464:14)",
+              "Immediate.setImmediate [as _onImmediate] (/home/ec2-user/environment/workshop/.env/lib/python3.6/dist-packages/jsii/_embedded/jsii/jsii-runtime.js:6467:37)",
+              "runCallback (timers.js:705:18)",
+              "tryOnImmediate (timers.js:676:5)",
+              "processImmediate (timers.js:658:5)"
+            ]
+          }
+        ],
+        "/workshop/MyTestInstance/InstanceRole/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "MyTestInstanceInstanceRole247E02FE",
+            "trace": [
+              "new Role (/tmp/jsii-kernel-4OoBOB/node_modules/@aws-cdk/aws-iam/lib/role.js:35:22)",
+              "new Instance (/tmp/jsii-kernel-4OoBOB/node_modules/@aws-cdk/aws-ec2/lib/instance.js:32:35)",
+              "obj._wrapSandboxCode (/home/ec2-user/environment/workshop/.env/lib/python3.6/dist-packages/jsii/_embedded/jsii/jsii-runtime.js:6992:49)",
+              "Kernel._wrapSandboxCode (/home/ec2-user/environment/workshop/.env/lib/python3.6/dist-packages/jsii/_embedded/jsii/jsii-runtime.js:7444:20)",
+              "Kernel._create (/home/ec2-user/environment/workshop/.env/lib/python3.6/dist-packages/jsii/_embedded/jsii/jsii-runtime.js:6992:26)",
+              "Kernel.create (/home/ec2-user/environment/workshop/.env/lib/python3.6/dist-packages/jsii/_embedded/jsii/jsii-runtime.js:6746:21)",
+              "KernelHost.processRequest (/home/ec2-user/environment/workshop/.env/lib/python3.6/dist-packages/jsii/_embedded/jsii/jsii-runtime.js:6521:28)",
+              "KernelHost.run (/home/ec2-user/environment/workshop/.env/lib/python3.6/dist-packages/jsii/_embedded/jsii/jsii-runtime.js:6464:14)",
+              "Immediate.setImmediate [as _onImmediate] (/home/ec2-user/environment/workshop/.env/lib/python3.6/dist-packages/jsii/_embedded/jsii/jsii-runtime.js:6467:37)",
+              "runCallback (timers.js:705:18)",
+              "tryOnImmediate (timers.js:676:5)",
+              "processImmediate (timers.js:658:5)"
+            ]
+          }
+        ],
+        "/workshop/MyTestInstance/InstanceProfile": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "MyTestInstanceInstanceProfile134329F3",
+            "trace": [
+              "new Instance (/tmp/jsii-kernel-4OoBOB/node_modules/@aws-cdk/aws-ec2/lib/instance.js:36:28)",
+              "obj._wrapSandboxCode (/home/ec2-user/environment/workshop/.env/lib/python3.6/dist-packages/jsii/_embedded/jsii/jsii-runtime.js:6992:49)",
+              "Kernel._wrapSandboxCode (/home/ec2-user/environment/workshop/.env/lib/python3.6/dist-packages/jsii/_embedded/jsii/jsii-runtime.js:7444:20)",
+              "Kernel._create (/home/ec2-user/environment/workshop/.env/lib/python3.6/dist-packages/jsii/_embedded/jsii/jsii-runtime.js:6992:26)",
+              "Kernel.create (/home/ec2-user/environment/workshop/.env/lib/python3.6/dist-packages/jsii/_embedded/jsii/jsii-runtime.js:6746:21)",
+              "KernelHost.processRequest (/home/ec2-user/environment/workshop/.env/lib/python3.6/dist-packages/jsii/_embedded/jsii/jsii-runtime.js:6521:28)",
+              "KernelHost.run (/home/ec2-user/environment/workshop/.env/lib/python3.6/dist-packages/jsii/_embedded/jsii/jsii-runtime.js:6464:14)",
+              "Immediate.setImmediate [as _onImmediate] (/home/ec2-user/environment/workshop/.env/lib/python3.6/dist-packages/jsii/_embedded/jsii/jsii-runtime.js:6467:37)",
+              "runCallback (timers.js:705:18)",
+              "tryOnImmediate (timers.js:676:5)",
+              "processImmediate (timers.js:658:5)"
+            ]
+          }
+        ],
+        "/workshop/MyTestInstance/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "MyTestInstance15794745",
+            "trace": [
+              "new Instance (/tmp/jsii-kernel-4OoBOB/node_modules/@aws-cdk/aws-ec2/lib/instance.js:58:25)",
+              "obj._wrapSandboxCode (/home/ec2-user/environment/workshop/.env/lib/python3.6/dist-packages/jsii/_embedded/jsii/jsii-runtime.js:6992:49)",
+              "Kernel._wrapSandboxCode (/home/ec2-user/environment/workshop/.env/lib/python3.6/dist-packages/jsii/_embedded/jsii/jsii-runtime.js:7444:20)",
+              "Kernel._create (/home/ec2-user/environment/workshop/.env/lib/python3.6/dist-packages/jsii/_embedded/jsii/jsii-runtime.js:6992:26)",
+              "Kernel.create (/home/ec2-user/environment/workshop/.env/lib/python3.6/dist-packages/jsii/_embedded/jsii/jsii-runtime.js:6746:21)",
+              "KernelHost.processRequest (/home/ec2-user/environment/workshop/.env/lib/python3.6/dist-packages/jsii/_embedded/jsii/jsii-runtime.js:6521:28)",
+              "KernelHost.run (/home/ec2-user/environment/workshop/.env/lib/python3.6/dist-packages/jsii/_embedded/jsii/jsii-runtime.js:6464:14)",
+              "Immediate.setImmediate [as _onImmediate] (/home/ec2-user/environment/workshop/.env/lib/python3.6/dist-packages/jsii/_embedded/jsii/jsii-runtime.js:6467:37)",
+              "runCallback (timers.js:705:18)",
+              "tryOnImmediate (timers.js:676:5)",
+              "processImmediate (timers.js:658:5)"
+            ]
+          }
+        ],
+        "/workshop/SsmParameterValue:--aws--service--ami-amazon-linux-latest--amzn-ami-hvm-x86_64-gp2:C96584B6-F00A-464E-AD19-53AFF4B05118.Parameter": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "SsmParameterValueawsserviceamiamazonlinuxlatestamznamihvmx8664gp2C96584B6F00A464EAD1953AFF4B05118Parameter",
+            "trace": [
+              "Function.fromStringParameterAttributes (/tmp/jsii-kernel-4OoBOB/node_modules/@aws-cdk/aws-ssm/lib/parameter.js:100:15)",
+              "Function.valueForTypedStringParameter (/tmp/jsii-kernel-4OoBOB/node_modules/@aws-cdk/aws-ssm/lib/parameter.js:167:21)",
+              "AmazonLinuxImage.getImage (/tmp/jsii-kernel-4OoBOB/node_modules/@aws-cdk/aws-ec2/lib/machine-image.js:63:41)",
+              "new Instance (/tmp/jsii-kernel-4OoBOB/node_modules/@aws-cdk/aws-ec2/lib/instance.js:40:48)",
+              "obj._wrapSandboxCode (/home/ec2-user/environment/workshop/.env/lib/python3.6/dist-packages/jsii/_embedded/jsii/jsii-runtime.js:6992:49)",
+              "Kernel._wrapSandboxCode (/home/ec2-user/environment/workshop/.env/lib/python3.6/dist-packages/jsii/_embedded/jsii/jsii-runtime.js:7444:20)",
+              "Kernel._create (/home/ec2-user/environment/workshop/.env/lib/python3.6/dist-packages/jsii/_embedded/jsii/jsii-runtime.js:6992:26)",
+              "Kernel.create (/home/ec2-user/environment/workshop/.env/lib/python3.6/dist-packages/jsii/_embedded/jsii/jsii-runtime.js:6746:21)",
+              "KernelHost.processRequest (/home/ec2-user/environment/workshop/.env/lib/python3.6/dist-packages/jsii/_embedded/jsii/jsii-runtime.js:6521:28)",
+              "KernelHost.run (/home/ec2-user/environment/workshop/.env/lib/python3.6/dist-packages/jsii/_embedded/jsii/jsii-runtime.js:6464:14)",
+              "Immediate.setImmediate [as _onImmediate] (/home/ec2-user/environment/workshop/.env/lib/python3.6/dist-packages/jsii/_embedded/jsii/jsii-runtime.js:6467:37)",
+              "runCallback (timers.js:705:18)",
+              "tryOnImmediate (timers.js:676:5)",
+              "processImmediate (timers.js:658:5)"
+            ]
+          }
+        ],
+        "/workshop/MyTestAlarm/MyTestAlarm/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "MyTestAlarm36EF334D",
+            "trace": [
+              "new Alarm (/tmp/jsii-kernel-4OoBOB/node_modules/@aws-cdk/aws-cloudwatch/lib/alarm.js:54:23)",
+              "obj._wrapSandboxCode (/home/ec2-user/environment/workshop/.env/lib/python3.6/dist-packages/jsii/_embedded/jsii/jsii-runtime.js:6992:49)",
+              "Kernel._wrapSandboxCode (/home/ec2-user/environment/workshop/.env/lib/python3.6/dist-packages/jsii/_embedded/jsii/jsii-runtime.js:7444:20)",
+              "Kernel._create (/home/ec2-user/environment/workshop/.env/lib/python3.6/dist-packages/jsii/_embedded/jsii/jsii-runtime.js:6992:26)",
+              "Kernel.create (/home/ec2-user/environment/workshop/.env/lib/python3.6/dist-packages/jsii/_embedded/jsii/jsii-runtime.js:6746:21)",
+              "KernelHost.processRequest (/home/ec2-user/environment/workshop/.env/lib/python3.6/dist-packages/jsii/_embedded/jsii/jsii-runtime.js:6521:28)",
+              "KernelHost.run (/home/ec2-user/environment/workshop/.env/lib/python3.6/dist-packages/jsii/_embedded/jsii/jsii-runtime.js:6464:14)",
+              "Immediate.setImmediate [as _onImmediate] (/home/ec2-user/environment/workshop/.env/lib/python3.6/dist-packages/jsii/_embedded/jsii/jsii-runtime.js:6467:37)",
+              "runCallback (timers.js:705:18)",
+              "tryOnImmediate (timers.js:676:5)",
+              "processImmediate (timers.js:658:5)"
+            ]
+          }
+        ]
+      }
+    }
+  },
+  "runtime": {
+    "libraries": {
+      "@aws-cdk/cx-api": "1.15.0",
+      "@aws-cdk/core": "1.15.0",
+      "@aws-cdk/region-info": "1.15.0",
+      "@aws-cdk/aws-iam": "1.15.0",
+      "@aws-cdk/aws-cloudwatch": "1.15.0",
+      "@aws-cdk/aws-kms": "1.15.0",
+      "@aws-cdk/aws-ssm": "1.15.0",
+      "@aws-cdk/aws-ec2": "1.15.0",
+      "jsii-runtime": "Python/3.6.8"
+    }
+  }
+}
